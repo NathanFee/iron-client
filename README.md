@@ -1,5 +1,14 @@
 # READ ME
 
+## Project information
+1. [Client Deployed Site](https://nathanfee.github.io/iron-client/)
+
+2. [Client Repository](https://github.com/NathanFee/iron-client)
+
+3. [API Deployed Site](https://iron-api.herokuapp.com/)
+
+4. [API Repository](https://github.com/NathanFee/iron-api)
+
 ## Project Idea
 ```md
 A web application to create workouts. I wanted to create an application that would be useful and be able to be expanded upon.
