@@ -22,8 +22,8 @@ const signInSuccess = (responseData) => {
   // save the Token
   store.user = responseData.user
   $('.sign-in-display').addClass('hidden')
-  $('#new-game-button').removeClass('hidden')
   $('.swap-form-display').addClass('hidden')
+  $('.menu').removeClass('hidden')
   $('.navbar-nav').removeClass('hidden')
   $('#navbarDropdownMenuLink').html(store.user.email)
   removeMessage()
@@ -50,13 +50,9 @@ const changePasswordFailure = () => {
 const signOutSuccess = () => {
   $('#user-message').html('Successfully Signed-Out!')
   $('form').trigger('reset')
-  $('#game-board').addClass('hidden')
-  $('.game-area').addClass('hidden')
-  $('#new-game-button').addClass('hidden')
   $('.navbar-nav').addClass('hidden')
-  $('.notifications-window').addClass('hidden')
   $('.swap-form-display').removeClass('hidden')
-  $('#new-game-button').removeAttr('disabled')
+  $('display').addClass('hidden')
   store.user = {}
   showSignUpForm()
   removeMessage()
@@ -78,6 +74,7 @@ const showSignInForm = function () {
 }
 
 const showSignUpForm = function () {
+  console.log('made it here')
   $('.sign-in-display').addClass('hidden')
   $('.sign-up-display').removeClass('hidden')
   $('.sign-up-button').addClass('hidden')

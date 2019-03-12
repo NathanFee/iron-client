@@ -1,0 +1,21 @@
+
+{{#each challenges as |challenge|}}
+  {{log challenge}}
+
+  <div class="challenge" data-id="{{challenge.id}}">
+    <h2>
+      <small>{{challenge.challenge_name}}</small>
+    </h2>
+    <p>Description:</p>
+    <p>{{challenge.description}}</p>
+    <p>
+      <small>Challenger:</small>
+      {{#if challenge.user}}
+        {{challenge.user}}
+      {{else}}
+        No challenger provided.
+      {{/if}}
+    </p>
+  </div>
+
+{{/each}}

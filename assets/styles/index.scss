@@ -3,15 +3,18 @@
 $text-color: #fff;
 $background-color: #000;
 $title-color: #d3d3d3;
-$secondary-title-color: #f00;
+$secondary-title-color: #bf0000;
 $form-title-text: #999;
 $form-background-color: rgba(52, 58, 64, .5);
 $button-background: #d3d3d3;
 $button-text: #000;
 $blink-color: #faa;
+$challenge-title-color: #bf0000;
 
 body {
   background-color: $background-color;
+  display: flex;
+  flex-direction: column;
   font-size: 1.25em;
 }
 
@@ -22,6 +25,12 @@ button {
 
 .blink {
   text-shadow: 0 0 .5px $blink-color;
+}
+
+.display {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -37,7 +46,7 @@ main {
   color: $title-color;
   display: flex;
   flex-direction: column;
-  height: 75vh;
+  justify-content: flex-end;
 }
 
 .title-challenge {
@@ -57,10 +66,10 @@ h4 {
 
 .sign-up-display {
   color: $form-title-text;
-  margin: 25px;
   display: flex;
   flex-direction: column;
   height: 60vh;
+  margin: 25px;
   max-width: 350px;
   min-height: 170px;
   min-width: 275px;
@@ -69,14 +78,39 @@ h4 {
 
 .sign-in-display {
   color: $form-title-text;
-  margin: 25px;
   display: flex;
   flex-direction: column;
   height: 60vh;
+  margin: 25px;
   max-width: 350px;
   min-height: 145px;
   min-width: 275px;
   width: 45vw;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  width: 45vw;
+}
+
+.challenge {
+  background-color: $form-background-color;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  padding: 10px;
+  width: 75%;
+
+  > h2 {
+    color: $challenge-title-color;
+    display: block;
+    }
+
+  > p {
+    display: block;
+    }
 }
 
 .submit {
