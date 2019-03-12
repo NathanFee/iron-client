@@ -52,7 +52,8 @@ const signOutSuccess = () => {
   $('form').trigger('reset')
   $('.navbar-nav').addClass('hidden')
   $('.swap-form-display').removeClass('hidden')
-  $('display').addClass('hidden')
+  $('.display').addClass('hidden')
+  $('.menu').addClass('hidden')
   store.user = {}
   showSignUpForm()
   removeMessage()
