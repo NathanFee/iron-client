@@ -1,1 +1,99 @@
 @import '~bootstrap/scss/bootstrap';
+
+$text-color: #fff;
+$background-color: #000;
+$title-color: #d3d3d3;
+$secondary-title-color: #f00;
+$form-title-text: #999;
+$form-background-color: rgba(52, 58, 64, .5);
+$button-background: #d3d3d3;
+$button-text: #000;
+$blink-color: #faa;
+
+body {
+  background-color: $background-color;
+  font-size: 1.25em;
+}
+
+button {
+  background-color: $button-background;
+  color: $button-text;
+}
+
+.blink {
+  text-shadow: 0 0 .5px $blink-color;
+}
+
+header {
+  color: $title-color;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2px;
+  margin-top: 5px;
+}
+
+main {
+  align-items: center;
+  color: $title-color;
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+}
+
+.title-challenge {
+  color: $secondary-title-color;
+}
+
+h4 {
+  color: $text-color;
+  margin-top: 10px;
+}
+
+.form-div {
+  background-color: $form-background-color;
+  border-radius: 10px;
+  height: 325px;
+}
+
+.sign-up-display {
+  color: $form-title-text;
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  max-width: 350px;
+  min-height: 170px;
+  min-width: 275px;
+  width: 45vw;
+}
+
+.sign-in-display {
+  color: $form-title-text;
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  max-width: 350px;
+  min-height: 145px;
+  min-width: 275px;
+  width: 45vw;
+}
+
+.submit {
+  background-color: $button-background;
+  border-radius: 5px;
+  margin: 5px 10px;
+  min-height: 35px;
+}
+
+.swap-form-display {
+  margin-bottom: 80px;
+
+  > .swap-form-message {
+    display: inline-block;
+  }
+}
+
+.hidden {
+  display: none;
+}
