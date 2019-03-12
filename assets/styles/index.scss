@@ -4,6 +4,7 @@ $text-color: #fff;
 $background-color: #000;
 $title-color: #d3d3d3;
 $secondary-title-color: #bf0000;
+$button-hover-color: #bf0000;
 $form-title-text: #999;
 $form-background-color: rgba(52, 58, 64, .5);
 $button-background: #d3d3d3;
@@ -21,6 +22,7 @@ body {
 button {
   background-color: $button-background;
   color: $button-text;
+  margin: 5px;
 }
 
 .blink {

@@ -13,6 +13,12 @@ const onViewChallenges = function () {
     .catch(ui.getChallengesFailure)
 }
 
+const onClickMenu = function () {
+  event.preventDefault()
+  ui.showMenu()
+}
+
 module.exports = {
-  onViewChallenges
+  onViewChallenges,
+  onClickMenu
 }

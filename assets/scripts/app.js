@@ -10,10 +10,12 @@ const events = require('./events.js')
 
 $(() => {
   $('.view-challenges-button').on('click', events.onViewChallenges)
+
+  $('#dropdown-menu-link').on('click', events.onClickMenu)
   // authorization
   $('#sign-up-form').on('submit', authEvents.onSignUp)
   $('#sign-in-form').on('submit', authEvents.onSignIn)
-  $('#sign-out-link').on('click', authEvents.onSignOut)
+  $('#dropdown-sign-out-link').on('click', authEvents.onSignOut)
   $('#change-password-form').on('submit', authEvents.onChangePassword)
   // Show sign-in-form
   $('.sign-in-button').on('click', authEvents.onSignInButton)

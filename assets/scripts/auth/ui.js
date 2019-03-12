@@ -17,7 +17,7 @@ const signUpFailure = () => {
 }
 
 const signInSuccess = (responseData) => {
-  $('#user-message').html('Sign-in Successful!')
+  // $('#user-message').html('Sign-in Successful!')
   $('form').trigger('reset')
   // save the Token
   store.user = responseData.user

@@ -7,8 +7,15 @@ const getChallengesSuccess = (data) => {
   const showChallengesHtml = showChallengesTemplate({ challenges: data.challenges })
   $('.display').removeClass('hidden')
   $('.display').html(showChallengesHtml)
+  $('.menu').addClass('hidden')
+}
+
+const showMenu = () => {
+  $('.display').addClass('hidden')
+  $('.menu').removeClass('hidden')
 }
 
 module.exports = {
-  getChallengesSuccess
+  getChallengesSuccess,
+  showMenu
 }
