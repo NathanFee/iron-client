@@ -10,6 +10,8 @@ const events = require('./events.js')
 
 $(() => {
   $('.view-challenges-button').on('click', events.onViewChallenges)
+  $('.find-challenge-button').on('click', events.onFindChallenge)
+  $('#find-challenge-form').on('submit', events.onFindChallengeSubmit)
 
   $('#dropdown-menu-link').on('click', events.onClickMenu)
   // authorization

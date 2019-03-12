@@ -12,6 +12,19 @@ const getChallenges = function () {
   })
 }
 
+const getChallenge = function (id) {
+  console.log('got to api')
+  console.log('This is ID:' + id)
+  return $.ajax({
+    url: config.apiUrl + `/challenges/${id}`,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
-  getChallenges
+  getChallenges,
+  getChallenge
 }

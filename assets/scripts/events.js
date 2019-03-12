@@ -18,7 +18,25 @@ const onClickMenu = function () {
   ui.showMenu()
 }
 
+const onFindChallengeSubmit = function () {
+  console.log('got to events')
+  event.preventDefault()
+  const form = event.target
+  const formData = getFormFields(form)
+
+  api.getChallenge(formData.id)
+    .then(ui.getChallengeSuccess)
+    .catch(ui.getChallengeFailure)
+}
+
+const onFindChallenge = function () {
+  event.preventDefault()
+  ui.showFindChallengeForm()
+}
+
 module.exports = {
   onViewChallenges,
+  onFindChallenge,
+  onFindChallengeSubmit,
   onClickMenu
 }
