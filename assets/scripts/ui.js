@@ -6,6 +6,7 @@ const showMenu = () => {
   $('.display').empty()
   $('.find-challenge-display').addClass('hidden')
   $('.menu').removeClass('hidden')
+  $('form').trigger('reset')
 }
 
 const showFindChallengeForm = () => {
@@ -15,7 +16,6 @@ const showFindChallengeForm = () => {
 }
 
 const getChallengesSuccess = (data) => {
-  console.log(data)
   const showChallengesHtml = showChallengesTemplate({ challenges: data.challenges })
   $('.display').removeClass('hidden')
   $('.display').html(showChallengesHtml)
@@ -26,12 +26,13 @@ const getChallengesFailure = () => {
 }
 
 const getChallengeSuccess = (data) => {
+  // make data conform to challenges template format
   data = {challenges: data}
   const showChallengeHtml = showChallengesTemplate({ challenges: data.challenges })
-  console.log(showChallengeHtml)
   $('.display').removeClass('hidden')
   $('.display').html(showChallengeHtml)
   $('.menu').addClass('hidden')
+  $('form').trigger('reset')
   $('.find-challenge-display').addClass('hidden')
 }
 
