@@ -23,7 +23,6 @@ const getChallenge = function (id) {
 }
 
 const createChallenge = function (formData) {
-  console.log(formData)
   return $.ajax({
     url: config.apiUrl + `/challenges`,
     method: 'POST',
@@ -40,7 +39,6 @@ const createChallenge = function (formData) {
 }
 
 const updateChallenge = function (formData) {
-  console.log(formData)
   return $.ajax({
     url: config.apiUrl + `/challenges/${formData.id}`,
     method: 'PATCH',
