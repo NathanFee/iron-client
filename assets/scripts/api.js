@@ -39,8 +39,19 @@ const createChallenge = function (formData) {
   })
 }
 
+const deleteChallenge = function (id) {
+  return $.ajax({
+    url: config.apiUrl + `/challenges/${id}`,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   getChallenges,
   getChallenge,
-  createChallenge
+  createChallenge,
+  deleteChallenge
 }

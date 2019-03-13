@@ -8,11 +8,18 @@ const showMenu = () => {
   $('.menu').removeClass('hidden')
   $('form').trigger('reset')
   $('.create-challenge-display').addClass('hidden')
+  $('.delete-challenge-display').addClass('hidden')
 }
 
 const showFindChallengeForm = () => {
   $('.display').removeClass('hidden')
   $('.find-challenge-display').removeClass('hidden')
+  $('.menu').addClass('hidden')
+}
+
+const showDeleteChallengeForm = () => {
+  $('.display').removeClass('hidden')
+  $('.delete-challenge-display').removeClass('hidden')
   $('.menu').addClass('hidden')
 }
 
@@ -33,8 +40,7 @@ const getChallengesFailure = () => {
 }
 
 const getChallengeSuccess = (data) => {
-  // make data conform to challenges template format
-  data = {challenges: data}
+  data = {challenges: data} // conform to challenges template format
   const showChallengeHtml = showChallengesTemplate({ challenges: data.challenges })
   $('.display').removeClass('hidden')
   $('.display').html(showChallengeHtml)
@@ -83,5 +89,6 @@ module.exports = {
   showCreateChallengeForm,
   showMenu,
   createChallengeSuccess,
-  createChallengeFailure
+  createChallengeFailure,
+  showDeleteChallengeForm
 }

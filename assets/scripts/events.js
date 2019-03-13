@@ -38,9 +38,24 @@ const onCreateChallengeSubmit = function () {
     .catch(ui.createChallengeFailure)
 }
 
+const onDeleteChallengeSubmit = function () {
+  event.preventDefault()
+  const form = event.target
+  const formData = getFormFields(form)
+
+  api.deleteChallenge(formData.id)
+    .then(ui.deleteChallengeSuccess)
+    .catch(ui.deleteChallengeFailure)
+}
+
 const onFindChallenge = function () {
   event.preventDefault()
   ui.showFindChallengeForm()
+}
+
+const onDeleteChallenge = function () {
+  event.preventDefault()
+  ui.showDeleteChallengeForm()
 }
 
 const onCreateChallenge = function () {
@@ -54,5 +69,7 @@ module.exports = {
   onFindChallengeSubmit,
   onClickMenu,
   onCreateChallenge,
-  onCreateChallengeSubmit
+  onCreateChallengeSubmit,
+  onDeleteChallenge,
+  onDeleteChallengeSubmit
 }

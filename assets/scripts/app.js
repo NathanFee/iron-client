@@ -14,6 +14,8 @@ $(() => {
   $('#find-challenge-form').on('submit', events.onFindChallengeSubmit)
   $('.create-challenge-button').on('click', events.onCreateChallenge)
   $('#create-challenge-form').on('submit', events.onCreateChallengeSubmit)
+  $('.delete-challenge-button').on('click', events.onDeleteChallenge)
+  $('#delete-challenge-form').on('submit', events.onDeleteChallengeSubmit)
 
   $('#dropdown-menu-link').on('click', events.onClickMenu)
   // authorization
