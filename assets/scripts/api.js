@@ -39,6 +39,23 @@ const createChallenge = function (formData) {
   })
 }
 
+const updateChallenge = function (formData) {
+  console.log(formData)
+  return $.ajax({
+    url: config.apiUrl + `/challenges/${formData.id}`,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      'challenge': {
+        'challenge_name': formData.challenge_name,
+        'description': formData.description
+      }
+    }
+  })
+}
+
 const deleteChallenge = function (id) {
   return $.ajax({
     url: config.apiUrl + `/challenges/${id}`,
@@ -53,5 +70,6 @@ module.exports = {
   getChallenges,
   getChallenge,
   createChallenge,
-  deleteChallenge
+  deleteChallenge,
+  updateChallenge
 }

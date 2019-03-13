@@ -9,6 +9,8 @@ const showMenu = () => {
   $('form').trigger('reset')
   $('.create-challenge-display').addClass('hidden')
   $('.delete-challenge-display').addClass('hidden')
+  $('.update-challenge-display').addClass('hidden')
+  $('.main-nav').removeClass('sticky-top')
 }
 
 const showFindChallengeForm = () => {
@@ -29,12 +31,20 @@ const showCreateChallengeForm = () => {
   $('.menu').addClass('hidden')
 }
 
+const showUpdateChallengeForm = () => {
+  $('.display').removeClass('hidden')
+  $('.update-challenge-display').removeClass('hidden')
+  $('.menu').addClass('hidden')
+}
+
 const getChallengesSuccess = (data) => {
   const showChallengesHtml = showChallengesTemplate({ challenges: data.challenges })
   $('.display').removeClass('hidden')
   $('.display').html(showChallengesHtml)
   $('.menu').addClass('hidden')
+  $('.main-nav').addClass('sticky-top')
 }
+
 const getChallengesFailure = () => {
   $('.display').html('Failed to find challenges.')
   $('form').trigger('reset')
@@ -64,7 +74,19 @@ const createChallengeSuccess = () => {
 }
 
 const createChallengeFailure = (data) => {
-  $('.display').html(`Created Challenge ID:${data.id}.`)
+  $('.display').html(`Failed to create challenge.`)
+  $('form').trigger('reset')
+  removeMessage()
+}
+
+const updateChallengeSuccess = () => {
+  $('.display').html('Challenge Updated!')
+  $('form').trigger('reset')
+  removeMessage()
+}
+
+const updateChallengeFailure = (data) => {
+  $('.display').html(`Failed to update challenge.`)
   $('form').trigger('reset')
   removeMessage()
 }
@@ -107,5 +129,8 @@ module.exports = {
   createChallengeFailure,
   showDeleteChallengeForm,
   deleteChallengeSuccess,
-  deleteChallengeFailure
+  deleteChallengeFailure,
+  updateChallengeSuccess,
+  updateChallengeFailure,
+  showUpdateChallengeForm
 }
