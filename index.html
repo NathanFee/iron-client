@@ -15,7 +15,7 @@
 
 <body>
 
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
+  <nav class="main-nav navbar navbar-expand navbar-dark" style="background-color: #111 !important;">
     <span class="navbar-text">
       <img src="http://www.pngmart.com/files/7/Kettlebell-PNG-Transparent-Picture.png" width="20" height="25" class="d-inline-block align-top" alt="">
       IRON <span class="title-challenge">Challenge</span>
@@ -27,43 +27,49 @@
             UserName
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a id="dropdown-sign-out-link" class="dropdown-item" href="#">Sign-Out</a>
             <a id="dropdown-menu-link" class="dropdown-item" href="#">Menu</a>
             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#changePasswordModal">Change Password</a>
+            <a id="dropdown-sign-out-link" class="dropdown-item" href="#">Sign-Out</a>
           </div>
         </li>
       </ul>
     </div>
   </nav>
 
-  <header>
+  <main style="background-image: url('https://images.alphacoders.com/692/692039.jpg'); background-size: cover;   background-repeat: no-repeat;
+  background-attachment: fixed;)">
     <h2>Ready for a challenge?</h2>
-  </header>
-
-  <main>
     <div class="display hidden"></div>
 
-    <form id="find-challenge-form" class="find-challenge-display hidden"> Find a Challenge
+    <form id="find-challenge-form" class="crud-form find-challenge-display hidden"> Find a Challenge
       <input name="id" type="number" placeholder="ID" required/>
       <input type="submit" value="Find" class="submit"/>
     </form>
 
-    <form id="create-challenge-form" class="create-challenge-display hidden"> Create a Challenge
+    <form id="create-challenge-form" class="crud-form create-challenge-display hidden"> Create a Challenge
       <input name="challenge_name" type="text" placeholder="Challenge Name" required/>
       <input name="description" type="text" placeholder="Description" required/>
       <input type="submit" value="Create" class="submit"/>
     </form>
 
-    <form id="delete-challenge-form" class="delete-challenge-display hidden"> Delete a Challenge
+    <form id="update-challenge-form" class="crud-form update-challenge-display hidden"> Update a Challenge
+      <input name="id" type="number" placeholder="ID" required/>
+      <input name="challenge_name" type="text" placeholder="Challenge Name" required/>
+      <input name="description" type="text" placeholder="Description" required/>
+      <input type="submit" value="Update" class="submit"/>
+    </form>
+
+    <form id="delete-challenge-form" class="crud-form delete-challenge-display hidden"> Delete a Challenge
       <input name="id" type="number" placeholder="ID" required/>
       <input type="submit" value="Delete" class="submit"/>
     </form>
 
     <div class="menu hidden">
-        <button type="button" class="btn btn-secondary view-challenges-button">View Challenges</button>
-        <button type="button" class="btn btn-secondary find-challenge-button">Find a Challenge</button>
-        <button type="button" class="btn btn-secondary create-challenge-button">Create new Challenge</button>
-        <button type="button" class="btn btn-secondary delete-challenge-button">Delete Challenge</button>
+        <button type="button" class="btn btn-dark view-challenges-button">View Challenges</button>
+        <button type="button" class="btn btn-dark find-challenge-button">Find a Challenge</button>
+        <button type="button" class="btn btn-dark create-challenge-button">Create new Challenge</button>
+        <button type="button" class="btn btn-dark update-challenge-button">Update Challenge</button>
+        <button type="button" class="btn btn-dark delete-challenge-button">Delete Challenge</button>
     </div>
 
     <div class="form-div">

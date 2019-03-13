@@ -2,15 +2,18 @@
 
 $text-color: #fff;
 $background-color: #000;
-$title-color: #d3d3d3;
+$title-color:  #fff;
 $secondary-title-color: #bf0000;
 $button-hover-color: #bf0000;
 $form-title-text: #999;
-$form-background-color: rgba(52, 58, 64, .5);
+$form-background-color: rgba(0, 0, 0, .85);
 $button-background: #d3d3d3;
 $button-text: #000;
 $blink-color: #faa;
 $challenge-title-color: #bf0000;
+$link-color: #f11;
+$link-hover: #bf0000;
+$model-title: #000;
 
 body {
   background-color: $background-color;
@@ -25,8 +28,13 @@ button {
   margin: 5px;
 }
 
-.blink {
-  text-shadow: 0 0 .5px $blink-color;
+.navbar-menu {
+  align-self: flex-end;
+}
+
+.create-challenge-display {
+  display: flex;
+  flex-direction: column;
 }
 
 .display {
@@ -49,6 +57,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin: auto 0;
 }
 
 .title-challenge {
@@ -97,6 +106,13 @@ h4 {
   width: 45vw;
 }
 
+.crud-form {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  width: 45vw;
+}
+
 .challenge {
   background-color: $form-background-color;
   display: flex;
@@ -128,6 +144,17 @@ h4 {
   > .swap-form-message {
     display: inline-block;
   }
+}
+
+a {
+  color: $link-color;
+  > :hover {
+    color: $link-hover;
+  }
+}
+
+.model-title {
+  color: $model-title;
 }
 
 .hidden {
