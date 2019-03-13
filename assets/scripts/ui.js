@@ -56,12 +56,25 @@ const getChallengeFailure = () => {
 const createChallengeSuccess = () => {
   // make data conform to challenges template format
   $('.display').html('Challenge Created!')
+  $('form').trigger('reset')
   removeMessage()
 }
 
-const createChallengeFailure = () => {
+const createChallengeFailure = (data) => {
   // make data conform to challenges template format
-  $('.display').html('Failed to Create Challenge')
+  $('.display').html(`Created Challenge ID:${data.id}.`)
+  $('form').trigger('reset')
+  removeMessage()
+}
+
+const deleteChallengeSuccess = () => {
+  $('.display').html('Challenge Deleted.')
+  $('form').trigger('reset')
+  removeMessage()
+}
+const deleteChallengeFailure = () => {
+  $('.display').html('Failed to delete challenge.')
+  $('form').trigger('reset')
   removeMessage()
 }
 
@@ -90,5 +103,7 @@ module.exports = {
   showMenu,
   createChallengeSuccess,
   createChallengeFailure,
-  showDeleteChallengeForm
+  showDeleteChallengeForm,
+  deleteChallengeSuccess,
+  deleteChallengeFailure
 }
