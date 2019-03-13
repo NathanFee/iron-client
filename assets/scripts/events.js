@@ -19,7 +19,6 @@ const onClickMenu = function () {
 }
 
 const onFindChallengeSubmit = function () {
-  console.log('got to events')
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
@@ -29,14 +28,31 @@ const onFindChallengeSubmit = function () {
     .catch(ui.getChallengeFailure)
 }
 
+const onCreateChallengeSubmit = function () {
+  event.preventDefault()
+  const form = event.target
+  const formData = getFormFields(form)
+
+  api.createChallenge(formData)
+    .then(ui.createChallengeSuccess)
+    .catch(ui.createChallengeFailure)
+}
+
 const onFindChallenge = function () {
   event.preventDefault()
   ui.showFindChallengeForm()
+}
+
+const onCreateChallenge = function () {
+  event.preventDefault()
+  ui.showCreateChallengeForm()
 }
 
 module.exports = {
   onViewChallenges,
   onFindChallenge,
   onFindChallengeSubmit,
-  onClickMenu
+  onClickMenu,
+  onCreateChallenge,
+  onCreateChallengeSubmit
 }

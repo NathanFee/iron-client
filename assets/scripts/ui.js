@@ -7,11 +7,18 @@ const showMenu = () => {
   $('.find-challenge-display').addClass('hidden')
   $('.menu').removeClass('hidden')
   $('form').trigger('reset')
+  $('.create-challenge-display').addClass('hidden')
 }
 
 const showFindChallengeForm = () => {
   $('.display').removeClass('hidden')
   $('.find-challenge-display').removeClass('hidden')
+  $('.menu').addClass('hidden')
+}
+
+const showCreateChallengeForm = () => {
+  $('.display').removeClass('hidden')
+  $('.create-challenge-display').removeClass('hidden')
   $('.menu').addClass('hidden')
 }
 
@@ -40,11 +47,41 @@ const getChallengeFailure = () => {
   console.log('Failed to get challenge')
 }
 
+const createChallengeSuccess = () => {
+  // make data conform to challenges template format
+  $('.display').html('Challenge Created!')
+  removeMessage()
+}
+
+const createChallengeFailure = () => {
+  // make data conform to challenges template format
+  $('.display').html('Failed to Create Challenge')
+  removeMessage()
+}
+
+// Message Blink
+let timeOut = null
+
+const stopTimeout = function () {
+  clearTimeout(timeOut)
+}
+
+const removeMessage = function () {
+  stopTimeout()
+  timeOut = setTimeout(() => {
+    $('.display').html('')
+  }, 3500)
+}
+// end Message Blink
+
 module.exports = {
   getChallengesSuccess,
   getChallengesFailure,
   showFindChallengeForm,
   getChallengeSuccess,
   getChallengeFailure,
-  showMenu
+  showCreateChallengeForm,
+  showMenu,
+  createChallengeSuccess,
+  createChallengeFailure
 }

@@ -55,6 +55,7 @@ const signOutSuccess = () => {
   $('.display').empty()
   $('.display').addClass('hidden')
   $('.find-challenge-display').addClass('hidden')
+  $('.create-challenge-display').addClass('hidden')
   $('.menu').addClass('hidden')
   store.user = {}
   showSignUpForm()
