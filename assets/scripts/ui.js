@@ -36,7 +36,9 @@ const getChallengesSuccess = (data) => {
   $('.menu').addClass('hidden')
 }
 const getChallengesFailure = () => {
-  console.log('Failed to get challenges')
+  $('.display').html('Failed to find challenges.')
+  $('form').trigger('reset')
+  removeMessage()
 }
 
 const getChallengeSuccess = (data) => {
@@ -50,18 +52,18 @@ const getChallengeSuccess = (data) => {
 }
 
 const getChallengeFailure = () => {
-  console.log('Failed to get challenge')
+  $('.display').html('Failed to find challenge.')
+  $('form').trigger('reset')
+  removeMessage()
 }
 
 const createChallengeSuccess = () => {
-  // make data conform to challenges template format
   $('.display').html('Challenge Created!')
   $('form').trigger('reset')
   removeMessage()
 }
 
 const createChallengeFailure = (data) => {
-  // make data conform to challenges template format
   $('.display').html(`Created Challenge ID:${data.id}.`)
   $('form').trigger('reset')
   removeMessage()
