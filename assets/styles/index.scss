@@ -1,8 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
-
 $text-color: #fff;
 $background-color: #000;
-$title-color:  #fff;
+$title-color: #fff;
 $secondary-title-color: #bf0000;
 $button-hover-color: #bf0000;
 $form-title-text: #999;
@@ -124,11 +123,11 @@ h4 {
   > h2 {
     color: $challenge-title-color;
     display: block;
-    }
+  }
 
   > p {
     display: block;
-    }
+  }
 }
 
 .submit {
