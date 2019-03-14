@@ -81,7 +81,6 @@ const showSignInForm = function () {
 }
 
 const showSignUpForm = function () {
-  console.log('made it here')
   $('.sign-in-display').addClass('hidden')
   $('.sign-up-display').removeClass('hidden')
   $('.sign-up-button').addClass('hidden')
