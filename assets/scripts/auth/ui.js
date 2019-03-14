@@ -27,6 +27,7 @@ const signInSuccess = (responseData) => {
   $('.navbar-nav').removeClass('hidden')
   $('#navbarDropdownMenuLink').html(store.user.email)
   removeMessage()
+  window.scrollTo(0, 0)
 }
 
 const signInFailure = () => {

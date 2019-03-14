@@ -13,6 +13,7 @@ $challenge-title-color: #bf0000;
 $link-color: #f11;
 $link-hover: #bf0000;
 $model-title: #000;
+$editable-text: #90ee90;
 
 body {
   background-color: $background-color;
@@ -40,6 +41,7 @@ button {
   align-items: center;
   display: flex;
   flex-direction: column;
+  width: 85vw;
 }
 
 header {
@@ -116,11 +118,11 @@ h4 {
   background-color: $form-background-color;
   display: flex;
   flex-direction: column;
-  margin: 15px;
+  margin: 15px 0;
   padding: 10px;
-  width: 75%;
+  width: 80%;
 
-  > h2 {
+  > h3 {
     color: $challenge-title-color;
     display: block;
   }
@@ -153,8 +155,16 @@ a {
   }
 }
 
-.model-title {
+.modal-title {
   color: $model-title;
+}
+
+.modal-alert {
+  color: $model-title;
+}
+
+.editable-text {
+  color: $editable-text;
 }
 
 .hidden {

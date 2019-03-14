@@ -11,30 +11,35 @@ const showMenu = () => {
   $('.delete-challenge-display').addClass('hidden')
   $('.update-challenge-display').addClass('hidden')
   $('.main-nav').removeClass('sticky-top')
+  window.scrollTo(0, 0)
 }
 
 const showFindChallengeForm = () => {
   $('.display').removeClass('hidden')
   $('.find-challenge-display').removeClass('hidden')
   $('.menu').addClass('hidden')
+  window.scrollTo(0, 0)
 }
 
 const showDeleteChallengeForm = () => {
   $('.display').removeClass('hidden')
   $('.delete-challenge-display').removeClass('hidden')
   $('.menu').addClass('hidden')
+  window.scrollTo(0, 0)
 }
 
 const showCreateChallengeForm = () => {
   $('.display').removeClass('hidden')
   $('.create-challenge-display').removeClass('hidden')
   $('.menu').addClass('hidden')
+  window.scrollTo(0, 0)
 }
 
 const showUpdateChallengeForm = () => {
   $('.display').removeClass('hidden')
   $('.update-challenge-display').removeClass('hidden')
   $('.menu').addClass('hidden')
+  window.scrollTo(0, 0)
 }
 
 const getChallengesSuccess = (data) => {
@@ -43,12 +48,14 @@ const getChallengesSuccess = (data) => {
   $('.display').html(showChallengesHtml)
   $('.menu').addClass('hidden')
   $('.main-nav').addClass('sticky-top')
+  window.scrollTo(0, 0)
 }
 
 const getChallengesFailure = () => {
   $('.display').html('Failed to find challenges.')
   $('form').trigger('reset')
   removeMessage()
+  window.scrollTo(0, 0)
 }
 
 const getChallengeSuccess = (data) => {
@@ -59,24 +66,28 @@ const getChallengeSuccess = (data) => {
   $('.menu').addClass('hidden')
   $('form').trigger('reset')
   $('.find-challenge-display').addClass('hidden')
+  window.scrollTo(0, 0)
 }
 
 const getChallengeFailure = () => {
   $('.display').html('Failed to find challenge.')
   $('form').trigger('reset')
   removeMessage()
+  window.scrollTo(0, 0)
 }
 
 const createChallengeSuccess = () => {
   $('.display').html('Challenge Created!')
   $('form').trigger('reset')
   removeMessage()
+  window.scrollTo(0, 0)
 }
 
 const createChallengeFailure = (data) => {
   $('.display').html(`Failed to create challenge.`)
   $('form').trigger('reset')
   removeMessage()
+  window.scrollTo(0, 0)
 }
 
 const updateChallengeSuccess = () => {
@@ -89,17 +100,20 @@ const updateChallengeFailure = (data) => {
   $('.display').html(`Failed to update challenge.`)
   $('form').trigger('reset')
   removeMessage()
+  window.scrollTo(0, 0)
 }
 
 const deleteChallengeSuccess = () => {
   $('.display').html('Challenge Deleted.')
   $('form').trigger('reset')
   removeMessage()
+  window.scrollTo(0, 0)
 }
 const deleteChallengeFailure = () => {
   $('.display').html('Failed to delete challenge.')
   $('form').trigger('reset')
   removeMessage()
+  window.scrollTo(0, 0)
 }
 
 // Message Blink
