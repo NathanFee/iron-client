@@ -61,6 +61,7 @@ const getChallengesFailure = () => {
 }
 
 const getChallengeSuccess = (data) => {
+  stopTimeout() // stop user message from clearing display
   data = {challenges: data} // conform to challenges template format
   const showChallengeHtml = showChallengesTemplate({ challenges: data.challenges })
   $('.display').removeClass('hidden')
