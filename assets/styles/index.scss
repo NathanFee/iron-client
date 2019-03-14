@@ -12,7 +12,7 @@ $blink-color: #faa;
 $challenge-title-color: #bf0000;
 $link-color: #f11;
 $link-hover: #bf0000;
-$crud-text: #bf0000;
+$crud-text: #cf0000;
 $model-title: #000;
 $editable-text: #90ee90;
 $fail-alert: #f00;
@@ -180,6 +180,14 @@ a {
   color: $success-alert;
   background-color: $alert-background;
   border-radius: 5px;
+}
+
+.modal-fail-alert {
+  color: $fail-alert;
+}
+
+.modal-success-alert {
+  color: $success-alert;
 }
 
 .unscrollable {

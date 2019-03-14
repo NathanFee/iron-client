@@ -36,13 +36,13 @@ const signInFailure = () => {
 }
 
 const changePasswordSuccess = () => {
-  $('#alert-message').html('Password Change Successful!').addClass('success-alert')
+  $('#modal-alert-message').html('Password Change Successful!').addClass('modal-success-alert')
   $('form').trigger('reset')
   removeMessage()
 }
 
 const changePasswordFailure = () => {
-  $('#alert-message').html('Error Changing Password. Please try again.').addClass('fail-alert')
+  $('#modal-alert-message').html('Error Changing Password. Please try again.').addClass('modal-fail-alert')
   $('form').trigger('reset')
   removeMessage()
 }
@@ -108,7 +108,7 @@ const removeMessage = function () {
   stopTimeout()
   timeOut = setTimeout(() => {
     $('#user-message').html('').removeClass('fail-alert').removeClass('success-alert')
-    $('#alert-message').html('')
+    $('#modal-alert-message').html('').removeClass('modal-success-alert').removeClass('modal-fail-alert')
   }, 3500)
 }
 
