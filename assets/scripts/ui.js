@@ -3,6 +3,8 @@
 const showChallengesTemplate = require('./templates/challenge-listing.handlebars')
 
 const showMenu = () => {
+  removeMessage()
+  $('#alert-message').html('')
   $('.display').empty()
   $('.find-challenge-display').addClass('hidden')
   $('.menu').removeClass('hidden')

@@ -25,6 +25,7 @@ const signInSuccess = (responseData) => {
   $('.menu').removeClass('hidden')
   $('.navbar-nav').removeClass('hidden')
   $('#navbarDropdownMenuLink').html(store.user.email)
+  $('.main-top-message').addClass('hidden')
   removeMessage()
   window.scrollTo(0, 0)
 }
@@ -59,8 +60,10 @@ const signOutSuccess = () => {
   $('.delete-challenge-display').addClass('hidden')
   $('.update-challenge-display').addClass('hidden')
   $('.menu').addClass('hidden')
+  $('.main-top-message').removeClass('hidden')
   $('.main-nav').removeClass('sticky-top')
   $('body').addClass('unscrollable')
+  $('#alert-message').html('')
   store.user = {}
   showSignUpForm()
   removeMessage()
