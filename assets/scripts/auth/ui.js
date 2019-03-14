@@ -60,6 +60,7 @@ const signOutSuccess = () => {
   $('.update-challenge-display').addClass('hidden')
   $('.menu').addClass('hidden')
   $('.main-nav').removeClass('sticky-top')
+  $('body').addClass('unscrollable')
   store.user = {}
   showSignUpForm()
   removeMessage()

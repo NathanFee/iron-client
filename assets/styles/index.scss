@@ -18,6 +18,7 @@ $editable-text: #90ee90;
 $fail-alert: #f00;
 $success-alert: #5bb654;
 $alert-background: rgba(0, 0, 0, .55);
+$text-shadow: #000;
 
 body {
   background-color: $background-color;
@@ -48,14 +49,6 @@ button {
   width: 85vw;
 }
 
-header {
-  color: $title-color;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2px;
-  margin-top: 5px;
-}
-
 main {
   align-items: center;
   color: $title-color;
@@ -63,6 +56,10 @@ main {
   flex-direction: column;
   justify-content: flex-end;
   margin: auto 0;
+}
+
+.main-top-message {
+  text-shadow: 0 0 5px $text-shadow;
 }
 
 .title-challenge {
@@ -183,6 +180,10 @@ a {
   color: $success-alert;
   background-color: $alert-background;
   border-radius: 5px;
+}
+
+.unscrollable {
+  overflow: hidden;
 }
 
 .hidden {

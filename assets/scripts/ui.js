@@ -10,6 +10,8 @@ const showMenu = () => {
   $('.create-challenge-display').addClass('hidden')
   $('.delete-challenge-display').addClass('hidden')
   $('.update-challenge-display').addClass('hidden')
+  $('.main-nav').removeClass('sticky-top')
+  $('body').addClass('unscrollable')
   window.scrollTo(0, 0)
 }
 
@@ -46,6 +48,8 @@ const getChallengesSuccess = (data) => {
   $('.display').removeClass('hidden')
   $('.display').html(showChallengesHtml)
   $('.menu').addClass('hidden')
+  $('.main-nav').addClass('sticky-top')
+  $('body').removeClass('unscrollable')
   window.scrollTo(0, 0)
 }
 
