@@ -3,7 +3,7 @@
 const store = require('../store.js')
 
 const signUpSuccess = () => {
-  $('#user-message').html('Sign-up successful, please sign in.')
+  $('#user-message').html('Sign-up successful, please sign in.').addClass('success-alert')
   $('form').trigger('reset')
   $('#sign-up-form').addClass('hidden')
   removeMessage()
@@ -11,13 +11,12 @@ const signUpSuccess = () => {
 }
 
 const signUpFailure = () => {
-  $('#user-message').html('Error on Sign-up.')
+  $('#user-message').html('Error on Sign-up.').addClass('fail-alert')
   $('form').trigger('reset')
   removeMessage()
 }
 
 const signInSuccess = (responseData) => {
-  // $('#user-message').html('Sign-in Successful!')
   $('form').trigger('reset')
   // save the Token
   store.user = responseData.user
@@ -31,25 +30,25 @@ const signInSuccess = (responseData) => {
 }
 
 const signInFailure = () => {
-  $('#user-message').html('Error on Sign-in.')
+  $('#user-message').html('Error on Sign-in.').addClass('fail-alert')
   $('form').trigger('reset')
   removeMessage()
 }
 
 const changePasswordSuccess = () => {
-  $('#alert-message').html('Password Change Successful!')
+  $('#alert-message').html('Password Change Successful!').addClass('success-alert')
   $('form').trigger('reset')
   removeMessage()
 }
 
 const changePasswordFailure = () => {
-  $('#alert-message').html('Error Changing Password. Please try again.')
+  $('#alert-message').html('Error Changing Password. Please try again.').addClass('fail-alert')
   $('form').trigger('reset')
   removeMessage()
 }
 
 const signOutSuccess = () => {
-  $('#user-message').html('Successfully Signed-Out!')
+  $('#user-message').html('Successfully Signed-Out!').addClass('success-alert')
   $('form').trigger('reset')
   $('.navbar-nav').addClass('hidden')
   $('.swap-form-display').removeClass('hidden')
@@ -67,7 +66,7 @@ const signOutSuccess = () => {
 }
 
 const signOutFailure = () => {
-  $('#user-message').html('Error Signing Out!')
+  $('#user-message').html('Error Signing Out!').addClass('fail-alert')
   $('form').trigger('reset')
   removeMessage()
 }
@@ -108,7 +107,7 @@ const stopTimeout = function () {
 const removeMessage = function () {
   stopTimeout()
   timeOut = setTimeout(() => {
-    $('#user-message').html('')
+    $('#user-message').html('').removeClass('fail-alert').removeClass('success-alert')
     $('#alert-message').html('')
   }, 3500)
 }

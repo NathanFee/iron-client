@@ -12,8 +12,12 @@ $blink-color: #faa;
 $challenge-title-color: #bf0000;
 $link-color: #f11;
 $link-hover: #bf0000;
+$crud-text: #bf0000;
 $model-title: #000;
 $editable-text: #90ee90;
+$fail-alert: #f00;
+$success-alert: #5bb654;
+$alert-background: rgba(0, 0, 0, .55);
 
 body {
   background-color: $background-color;
@@ -110,6 +114,7 @@ h4 {
 .crud-form {
   display: flex;
   flex-direction: column;
+  color: $crud-text;
   height: 60vh;
   width: 45vw;
 }
@@ -165,6 +170,18 @@ a {
 
 .editable-text {
   color: $editable-text;
+}
+
+.fail-alert {
+  color: $fail-alert;
+  background-color: $alert-background;
+  border-radius: 5px;
+}
+
+.success-alert {
+  color: $success-alert;
+  background-color: $alert-background;
+  border-radius: 5px;
 }
 
 .hidden {

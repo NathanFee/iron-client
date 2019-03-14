@@ -52,7 +52,7 @@ const getChallengesSuccess = (data) => {
 }
 
 const getChallengesFailure = () => {
-  $('.display').html('Failed to find challenges.')
+  $('.display').html('Failed to find challenges.').addClass('fail-alert')
   $('form').trigger('reset')
   removeMessage()
   window.scrollTo(0, 0)
@@ -70,47 +70,47 @@ const getChallengeSuccess = (data) => {
 }
 
 const getChallengeFailure = () => {
-  $('.display').html('Failed to find challenge.')
+  $('.display').html('Failed to find challenge.').addClass('fail-alert')
   $('form').trigger('reset')
   removeMessage()
   window.scrollTo(0, 0)
 }
 
 const createChallengeSuccess = () => {
-  $('.display').html('Challenge Created!')
+  $('.display').html('Challenge Created!').addClass('success-alert')
   $('form').trigger('reset')
   removeMessage()
   window.scrollTo(0, 0)
 }
 
 const createChallengeFailure = (data) => {
-  $('.display').html(`Failed to create challenge.`)
+  $('.display').html(`Failed to create challenge.`).addClass('fail-alert')
   $('form').trigger('reset')
   removeMessage()
   window.scrollTo(0, 0)
 }
 
 const updateChallengeSuccess = () => {
-  $('.display').html('Challenge Updated!')
+  $('.display').html('Challenge Updated!').addClass('success-alert')
   $('form').trigger('reset')
   removeMessage()
 }
 
 const updateChallengeFailure = (data) => {
-  $('.display').html(`Failed to update challenge.`)
+  $('.display').html(`Failed to update challenge.`).addClass('fail-alert')
   $('form').trigger('reset')
   removeMessage()
   window.scrollTo(0, 0)
 }
 
 const deleteChallengeSuccess = () => {
-  $('.display').html('Challenge Deleted.')
+  $('.display').html('Challenge Deleted.').addClass('success-alert')
   $('form').trigger('reset')
   removeMessage()
   window.scrollTo(0, 0)
 }
 const deleteChallengeFailure = () => {
-  $('.display').html('Failed to delete challenge.')
+  $('.display').html('Failed to delete challenge.').addClass('fail-alert')
   $('form').trigger('reset')
   removeMessage()
   window.scrollTo(0, 0)
@@ -126,7 +126,7 @@ const stopTimeout = function () {
 const removeMessage = function () {
   stopTimeout()
   timeOut = setTimeout(() => {
-    $('.display').html('')
+    $('.display').html('').removeClass('fail-alert').removeClass('success-alert')
   }, 3500)
 }
 // end Message Blink
