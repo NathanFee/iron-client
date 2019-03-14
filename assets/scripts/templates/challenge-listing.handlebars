@@ -1,13 +1,15 @@
-
 {{#each challenges as |challenge|}}
   {{log challenge}}
 
   <div class="challenge" data-id="{{challenge.id}}">
-    <h2>
-      <small>{{challenge.challenge_name}}</small>
-    </h2>
-    <p>Description:</p>
-    <p>{{challenge.description}}</p>
+    <h3 class="challenge-title">
+      {{challenge.challenge_name}}
+    </h3>
+    <h4 class="challenge-description-header">Description:</h4>
+    <p class="challenge-description"> {{challenge.description}}</p>
+    {{#if challenge.editable}}
+    <p class="editable-text">Editable</p>
+    {{/if}}
     <p>ID:{{challenge.id}}</p>
   </div>
 
