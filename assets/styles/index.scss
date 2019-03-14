@@ -59,6 +59,8 @@ main {
 }
 
 .main-top-message {
+  font-family: 'Audiowide', cursive;
+  margin-bottom: 0;
   text-shadow: 0 0 5px $text-shadow;
 }
 
@@ -118,7 +120,7 @@ h4 {
 .crud-form-title {
   color: $crud-text;
   font-size: 1em;
-  text-shadow: 0px 0px 4px $text-shadow;
+  text-shadow: 0 0 4px $text-shadow;
 }
 
 .challenge {
@@ -131,6 +133,7 @@ h4 {
 
   > h3 {
     color: $challenge-title-color;
+    font-family: 'Audiowide', cursive;
     display: block;
   }
 
@@ -171,20 +174,20 @@ a {
 }
 
 .editable-text {
-  font-size: .75em;
   color: $editable-text;
+  font-size: 0.75em;
 }
 
 .fail-alert {
-  color: $fail-alert;
   background-color: $alert-background;
   border-radius: 5px;
+  color: $fail-alert;
 }
 
 .success-alert {
-  color: $success-alert;
   background-color: $alert-background;
   border-radius: 5px;
+  color: $success-alert;
 }
 
 .modal-fail-alert {
