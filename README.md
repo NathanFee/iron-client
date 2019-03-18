@@ -29,29 +29,6 @@ A single-page web application to create and post workout challenges.
 10. As a user, I want to be able to delete a challenge I have created.
 ```
 
-## Planned tables and columns
-
-```md
-A users table with columns for username, email, password.
-A challenge table, with a column for name and a description of the challenge.
-```
-
-## ERD (entity relationship diagram)
-![ERD](https://i.imgur.com/oQKSeQQ.jpg)
-
-## Routing
-```md
-POST /sign-up	 users#signup
-POST /sign-in	 users#signin
-DELETE /sign-out  users#signout
-PATCH	/change-password  users#changepw
-GET	/challenges	 challenges#index
-POST /challenges  challenges#create
-GET	/challenges/:id	 challenges#show
-PATCH	/challenges/:id	 challenges#update
-DELETE /challenges/:id  challenges#destroy
-```
-
 ## Wireframes
 ![Wireframes](https://i.imgur.com/my5Wnhz.jpg)
 
